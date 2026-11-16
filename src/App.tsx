@@ -1,20 +1,21 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Navbar } from './components/Navbar'
-import { Hero } from './components/Hero'
-import { Problems } from './components/Problems'
-import { Services } from './components/Services'
-import { Examples } from './components/Examples'
-import { WhoAndContact } from './components/WhoAndContact'
+import { HomePage } from './pages/Home'
+import { DesarrolloWebPage } from './pages/DesarrolloWeb'
+import { AutomatizacionesPage } from './pages/Automatizaciones'
 
 function App() {
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      <Hero />
-      <Problems />
-      <Services />
-      <Examples />
-      <WhoAndContact />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen bg-background">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/desarrollo-web" element={<DesarrolloWebPage />} />
+          <Route path="/automatizaciones" element={<AutomatizacionesPage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   )
 }
 

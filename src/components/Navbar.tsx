@@ -1,27 +1,47 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 
 export function Navbar() {
   const { t, i18n } = useTranslation()
   const current = i18n.language?.startsWith('es') ? 'es' : 'en'
   const [open, setOpen] = useState(false)
+  const location = useLocation()
+  const isHome = location.pathname === '/'
 
   return (
     <nav className="fixed top-0 left-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
-        <a href="#" className="text-base font-semibold text-foreground md:text-lg">
+        <Link
+          to="/"
+          className="text-base font-semibold text-foreground md:text-lg"
+          onClick={() => {
+            if (location.pathname === '/') {
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }
+          }}
+        >
           Devs Extension
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-8 md:flex">
-          <a href="#servicios" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            {t('nav.solutions')}
-          </a>
-          <a href="#contacto" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            {t('nav.howWeWork')}
-          </a>
-          <a href="#contacto" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+          {isHome ? (
+            <a href="#servicios" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+              {t('nav.solutions')}
+            </a>
+          ) : (
+            <Link to="/#servicios" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+              {t('nav.solutions')}
+            </Link>
+          )}
+          <Link to="/desarrollo-web" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            {t('services.development.label')}
+          </Link>
+          <Link to="/automatizaciones" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            {t('services.automation.label')}
+          </Link>
+          <a href={isHome ? '#contacto' : '/#contacto'} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
             {t('nav.contact')}
           </a>
         </div>
@@ -62,25 +82,16 @@ export function Navbar() {
 
       {open && (
         <div className="border-t border-border bg-background px-4 pb-4 md:hidden">
-          <a
-            href="#servicios"
-            onClick={() => setOpen(false)}
-            className="block py-3 text-sm text-muted-foreground"
-          >
-            {t('nav.solutions')}
-          </a>
-          <a
-            href="#contacto"
-            onClick={() => setOpen(false)}
-            className="block py-3 text-sm text-muted-foreground"
-          >
-            {t('nav.howWeWork')}
-          </a>
-          <a
-            href="#contacto"
-            onClick={() => setOpen(false)}
-            className="block py-3 text-sm text-muted-foreground"
-          >
+          <Link to="/" onClick={() => setOpen(false)} className="block py-3 text-sm text-muted-foreground">
+            Inicio
+          </Link>
+          <Link to="/desarrollo-web" onClick={() => setOpen(false)} className="block py-3 text-sm text-muted-foreground">
+            {t('services.development.label')}
+          </Link>
+          <Link to="/automatizaciones" onClick={() => setOpen(false)} className="block py-3 text-sm text-muted-foreground">
+            {t('services.automation.label')}
+          </Link>
+          <a href="#contacto" onClick={() => setOpen(false)} className="block py-3 text-sm text-muted-foreground">
             {t('nav.contact')}
           </a>
         </div>

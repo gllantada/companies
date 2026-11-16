@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { motion } from 'framer-motion'
 import { MessageCircle, Monitor, Database, Plug } from 'lucide-react'
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -19,36 +18,28 @@ export function Problems() {
   }>
 
   return (
-    <section className="mx-auto max-w-6xl px-4 py-14 md:px-6 md:py-20">
+    <section className="scroll-reveal mx-auto max-w-6xl px-4 py-14 md:px-6 md:py-20">
       <h2 className="mb-8 text-center text-2xl font-bold text-foreground md:mb-12 md:text-4xl">
         {t('problems.title')}
       </h2>
 
-      <div className="grid gap-3 sm:grid-cols-2 md:gap-4 lg:grid-cols-4">
+      <div className="scroll-reveal-stagger grid gap-3 sm:grid-cols-2 md:gap-4 lg:grid-cols-4">
         {items.map((item, i) => (
-          <ProblemCard key={i} item={item} index={i} />
+          <ProblemCard key={i} item={item} />
         ))}
       </div>
     </section>
   )
 }
 
-function ProblemCard({
-  item,
-  index,
-}: {
+function ProblemCard({ item }: {
   item: { icon: string; title: string; description: string }
-  index: number
 }) {
   const [expanded, setExpanded] = useState(false)
   const Icon = iconMap[item.icon] || MessageCircle
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.4, delay: index * 0.1 }}
+    <div
       className="group cursor-pointer rounded-xl border border-border bg-card p-5 transition-colors hover:border-foreground/20 focus-within:border-foreground/20 md:p-6"
       tabIndex={0}
       onClick={() => setExpanded(!expanded)}
@@ -73,6 +64,6 @@ function ProblemCard({
           {item.description}
         </p>
       </div>
-    </motion.div>
+    </div>
   )
 }

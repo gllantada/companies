@@ -1,7 +1,5 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
 
 export function WhoAndContact() {
   const { t } = useTranslation()
@@ -9,13 +7,8 @@ export function WhoAndContact() {
   return (
     <section id="contacto" className="mx-auto max-w-6xl px-4 py-14 md:px-6 md:py-20">
       {/* Quien desarrolla */}
-      <div className="grid items-center gap-8 md:grid-cols-[45fr_55fr] md:gap-16">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
+      <div className="scroll-reveal grid items-center gap-8 md:grid-cols-[45fr_55fr] md:gap-16">
+        <div>
           <img
             src="/images/gonzalo-devsextension.jpg"
             alt="Gonzalo Llantada, desarrollador en Devs Extension"
@@ -23,29 +16,15 @@ export function WhoAndContact() {
             className="w-full rounded-xl object-cover md:rounded-2xl"
             style={{ aspectRatio: '4/3' }}
           />
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
+        <div>
           <h2 className="text-2xl font-bold leading-tight text-foreground md:text-4xl">
             {t('who.title')}
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:mt-4 md:text-base">{t('who.p1')}</p>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:mt-3 md:text-base">{t('who.p2')}</p>
-
-          <div className="mt-5 flex flex-wrap items-center gap-1.5 text-xs font-medium text-foreground md:mt-6 md:gap-2 md:text-sm">
-            {t('who.method').split('→').map((step, i, arr) => (
-              <span key={i} className="flex items-center gap-1.5 md:gap-2">
-                {step.trim()}
-                {i < arr.length - 1 && <ArrowRight className="h-3 w-3 text-muted-foreground" />}
-              </span>
-            ))}
-          </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Contacto */}
