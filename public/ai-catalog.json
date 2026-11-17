@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "name": "Devs Extension",
+  "description": "Desarrollo web, automatizaciones y agentes IA para empresas en Pilar y zona norte de Buenos Aires.",
+  "url": "https://companies.devsextension.com",
+  "contact": {
+    "email": "gllantada@devsextension.com"
+  },
+  "resources": [
+    {
+      "type": "website",
+      "url": "https://companies.devsextension.com/",
+      "title": "Inicio",
+      "description": "Página principal de Devs Extension para empresas."
+    },
+    {
+      "type": "website",
+      "url": "https://companies.devsextension.com/desarrollo-web",
+      "title": "Desarrollo web",
+      "description": "Aplicaciones a medida, portales de pedidos, cotizadores y funcionalidades web para empresas."
+    },
+    {
+      "type": "website",
+      "url": "https://companies.devsextension.com/automatizaciones",
+      "title": "Automatizaciones",
+      "description": "Asistentes conversacionales para WhatsApp, automatización de registros e integraciones entre sistemas."
+    }
+  ]
+}
