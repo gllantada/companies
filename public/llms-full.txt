@@ -1,0 +1,45 @@
+# Devs Extension — Información completa
+
+> Desarrollo web, automatizaciones y agentes IA para empresas en Pilar y zona norte de Buenos Aires.
+
+## Sobre nosotros
+
+Devs Extension es un equipo de desarrollo liderado por Gonzalo Llantada, especializado en soluciones tecnológicas para pequeñas y medianas empresas. Trabajamos desde Pilar, Buenos Aires, Argentina, atendiendo empresas de zona norte y todo el país.
+
+## Servicios
+
+### Desarrollo web a medida
+- Portales de pedidos online para distribuidoras, mayoristas y comercios
+- Cotizadores automáticos que calculan presupuestos en tiempo real
+- Sistemas de agenda de turnos y reservas
+- Formularios inteligentes que recopilan datos y disparan acciones automáticas
+- Mejoras y nuevas funcionalidades para sitios web existentes
+- Aplicaciones web completas a medida
+
+### Automatizaciones e inteligencia artificial
+- Asistentes conversacionales para WhatsApp que atienden consultas, toman pedidos y registran datos automáticamente
+- Automatización de seguimiento de clientes y oportunidades comerciales
+- Integración entre sistemas existentes (ERP, CRM, planillas, email)
+- Automatización de agendamiento de turnos y servicios
+- Bots de atención al cliente con inteligencia artificial
+- Automatización de procesos internos que hoy se hacen manualmente
+
+## Cómo trabajamos
+
+1. Escuchamos qué necesitás resolver
+2. Proponemos una solución concreta con alcance y plazo definidos
+3. Desarrollamos en sprints cortos con entregas frecuentes
+4. Entregamos el sistema funcionando con soporte post-lanzamiento
+
+## Contacto
+
+- Web: https://companies.devsextension.com
+- Email: gllantada@devsextension.com
+- Ubicación: Pilar, Buenos Aires, Argentina
+- Idiomas: Español, English
+
+## Páginas del sitio
+
+- Inicio: https://companies.devsextension.com/
+- Desarrollo web: https://companies.devsextension.com/desarrollo-web
+- Automatizaciones: https://companies.devsextension.com/automatizaciones
