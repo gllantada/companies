@@ -34,6 +34,9 @@ export function Hero() {
         <img
           src="/images/hero-empresa.jpg"
           alt="Equipo trabajando en soluciones web para empresas"
+          width={800}
+          height={600}
+          fetchPriority="high"
           className="w-full rounded-xl object-cover md:rounded-2xl"
           style={{ aspectRatio: '4/3' }}
         />

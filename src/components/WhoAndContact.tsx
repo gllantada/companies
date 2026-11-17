@@ -12,6 +12,8 @@ export function WhoAndContact() {
           <img
             src="/images/gonzalo-devsextension.jpg"
             alt="Gonzalo Llantada, desarrollador en Devs Extension"
+            width={600}
+            height={450}
             loading="lazy"
             className="w-full rounded-xl object-cover md:rounded-2xl"
             style={{ aspectRatio: '4/3' }}
@@ -106,27 +108,42 @@ function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="mx-auto mt-6 grid max-w-lg gap-3 md:mt-8 md:gap-4">
-      <input
-        type="text"
-        name="name"
-        required
-        placeholder={t('contact.namePlaceholder')}
-        className={inputClass}
-      />
-      <input
-        type="email"
-        name="email"
-        required
-        placeholder={t('contact.emailPlaceholder')}
-        className={inputClass}
-      />
-      <input
-        type="text"
-        name="company"
-        required
-        placeholder={t('contact.companyPlaceholder')}
-        className={inputClass}
-      />
+      <div>
+        <label htmlFor="contact-name" className="sr-only">{t('contact.namePlaceholder')}</label>
+        <input
+          id="contact-name"
+          type="text"
+          name="name"
+          required
+          autoComplete="name"
+          placeholder={t('contact.namePlaceholder')}
+          className={inputClass}
+        />
+      </div>
+      <div>
+        <label htmlFor="contact-email" className="sr-only">{t('contact.emailPlaceholder')}</label>
+        <input
+          id="contact-email"
+          type="email"
+          name="email"
+          required
+          autoComplete="email"
+          placeholder={t('contact.emailPlaceholder')}
+          className={inputClass}
+        />
+      </div>
+      <div>
+        <label htmlFor="contact-company" className="sr-only">{t('contact.companyPlaceholder')}</label>
+        <input
+          id="contact-company"
+          type="text"
+          name="company"
+          required
+          autoComplete="organization"
+          placeholder={t('contact.companyPlaceholder')}
+          className={inputClass}
+        />
+      </div>
       <div>
         <label htmlFor="interest" className="mb-1 block text-sm text-muted-foreground">
           {t('contact.interestLabel')}
@@ -149,21 +166,30 @@ function ContactForm() {
       </div>
 
       {isDiagnosis && (
-        <input
-          type="url"
-          name="website"
-          required
-          placeholder={t('contact.websitePlaceholder')}
-          className={inputClass}
-        />
+        <div>
+          <label htmlFor="contact-website" className="sr-only">{t('contact.websitePlaceholder')}</label>
+          <input
+            id="contact-website"
+            type="url"
+            name="website"
+            required
+            autoComplete="url"
+            placeholder={t('contact.websitePlaceholder')}
+            className={inputClass}
+          />
+        </div>
       )}
 
-      <textarea
-        name="message"
-        rows={3}
-        placeholder={t('contact.messagePlaceholder')}
-        className={inputClass}
-      />
+      <div>
+        <label htmlFor="contact-message" className="sr-only">{t('contact.messagePlaceholder')}</label>
+        <textarea
+          id="contact-message"
+          name="message"
+          rows={3}
+          placeholder={t('contact.messagePlaceholder')}
+          className={inputClass}
+        />
+      </div>
 
       {status === 'error' && (
         <p className="text-sm text-red-600">{t('contact.error')}</p>

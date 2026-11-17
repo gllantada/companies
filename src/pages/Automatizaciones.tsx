@@ -3,10 +3,15 @@ import { useTranslation } from 'react-i18next'
 import { ArrowRight } from 'lucide-react'
 import { ContactSection } from '../components/ContactSection'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 export function AutomatizacionesPage() {
   const { t } = useTranslation()
   useScrollReveal()
+  usePageMeta(
+    t('auto.hero.title'),
+    t('auto.hero.subtitle')
+  )
 
   return (
     <>
@@ -50,6 +55,9 @@ function AutoHero() {
         <img
           src="/images/auto-hero.jpg"
           alt={t('auto.hero.alt')}
+          width={800}
+          height={600}
+          fetchPriority="high"
           className="w-full rounded-xl object-cover md:rounded-2xl"
           style={{ aspectRatio: '4/3' }}
         />

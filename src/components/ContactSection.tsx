@@ -97,13 +97,22 @@ function ContactForm({ defaultInterest, submitLabel }: { defaultInterest?: strin
 
   return (
     <form onSubmit={handleSubmit} className="mx-auto mt-6 grid max-w-lg gap-3 md:mt-8 md:gap-4">
-      <input type="text" name="name" required placeholder={t('contact.namePlaceholder')} className={inputClass} />
-      <input type="email" name="email" required placeholder={t('contact.emailPlaceholder')} className={inputClass} />
-      <input type="text" name="company" required placeholder={t('contact.companyPlaceholder')} className={inputClass} />
       <div>
-        <label htmlFor="interest" className="mb-1 block text-sm text-muted-foreground">{t('contact.interestLabel')}</label>
+        <label htmlFor="sub-name" className="sr-only">{t('contact.namePlaceholder')}</label>
+        <input id="sub-name" type="text" name="name" required autoComplete="name" placeholder={t('contact.namePlaceholder')} className={inputClass} />
+      </div>
+      <div>
+        <label htmlFor="sub-email" className="sr-only">{t('contact.emailPlaceholder')}</label>
+        <input id="sub-email" type="email" name="email" required autoComplete="email" placeholder={t('contact.emailPlaceholder')} className={inputClass} />
+      </div>
+      <div>
+        <label htmlFor="sub-company" className="sr-only">{t('contact.companyPlaceholder')}</label>
+        <input id="sub-company" type="text" name="company" required autoComplete="organization" placeholder={t('contact.companyPlaceholder')} className={inputClass} />
+      </div>
+      <div>
+        <label htmlFor="sub-interest" className="mb-1 block text-sm text-muted-foreground">{t('contact.interestLabel')}</label>
         <select
-          id="interest"
+          id="sub-interest"
           name="interest"
           required
           value={interest}
@@ -117,9 +126,15 @@ function ContactForm({ defaultInterest, submitLabel }: { defaultInterest?: strin
         </select>
       </div>
       {isDiagnosis && (
-        <input type="url" name="website" required placeholder={t('contact.websitePlaceholder')} className={inputClass} />
+        <div>
+          <label htmlFor="sub-website" className="sr-only">{t('contact.websitePlaceholder')}</label>
+          <input id="sub-website" type="url" name="website" required autoComplete="url" placeholder={t('contact.websitePlaceholder')} className={inputClass} />
+        </div>
       )}
-      <textarea name="message" rows={3} placeholder={t('contact.messagePlaceholder')} className={inputClass} />
+      <div>
+        <label htmlFor="sub-message" className="sr-only">{t('contact.messagePlaceholder')}</label>
+        <textarea id="sub-message" name="message" rows={3} placeholder={t('contact.messagePlaceholder')} className={inputClass} />
+      </div>
       {status === 'error' && <p className="text-sm text-red-600">{t('contact.error')}</p>}
       <button
         type="submit"

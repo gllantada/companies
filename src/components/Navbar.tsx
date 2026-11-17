@@ -41,15 +41,23 @@ export function Navbar() {
           <Link to="/automatizaciones" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
             {t('services.automation.label')}
           </Link>
-          <a href={isHome ? '#contacto' : '/#contacto'} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            {t('nav.contact')}
-          </a>
+          {isHome ? (
+            <a href="#contacto" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+              {t('nav.contact')}
+            </a>
+          ) : (
+            <Link to="/#contacto" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+              {t('nav.contact')}
+            </Link>
+          )}
         </div>
 
         <div className="flex items-center gap-2">
           <div className="flex gap-1 rounded-lg border border-border bg-card p-0.5">
             <button
               onClick={() => i18n.changeLanguage('en')}
+              aria-pressed={current === 'en'}
+              aria-label="English"
               className={`rounded-md px-2 py-1 text-xs font-medium transition-colors ${
                 current === 'en'
                   ? 'bg-foreground text-background'
@@ -60,6 +68,8 @@ export function Navbar() {
             </button>
             <button
               onClick={() => i18n.changeLanguage('es')}
+              aria-pressed={current === 'es'}
+              aria-label="Español"
               className={`rounded-md px-2 py-1 text-xs font-medium transition-colors ${
                 current === 'es'
                   ? 'bg-foreground text-background'
@@ -73,7 +83,9 @@ export function Navbar() {
           <button
             onClick={() => setOpen(!open)}
             className="ml-1 rounded-lg p-2 text-foreground md:hidden"
-            aria-label="Menu"
+            aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -81,7 +93,7 @@ export function Navbar() {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-background px-4 pb-4 md:hidden">
+        <div id="mobile-menu" className="border-t border-border bg-background px-4 pb-4 md:hidden">
           <Link to="/" onClick={() => setOpen(false)} className="block py-3 text-sm text-muted-foreground">
             Inicio
           </Link>
@@ -91,9 +103,15 @@ export function Navbar() {
           <Link to="/automatizaciones" onClick={() => setOpen(false)} className="block py-3 text-sm text-muted-foreground">
             {t('services.automation.label')}
           </Link>
-          <a href="#contacto" onClick={() => setOpen(false)} className="block py-3 text-sm text-muted-foreground">
-            {t('nav.contact')}
-          </a>
+          {isHome ? (
+            <a href="#contacto" onClick={() => setOpen(false)} className="block py-3 text-sm text-muted-foreground">
+              {t('nav.contact')}
+            </a>
+          ) : (
+            <Link to="/#contacto" onClick={() => setOpen(false)} className="block py-3 text-sm text-muted-foreground">
+              {t('nav.contact')}
+            </Link>
+          )}
         </div>
       )}
     </nav>

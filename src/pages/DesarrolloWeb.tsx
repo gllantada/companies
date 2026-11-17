@@ -2,10 +2,15 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ContactSection } from '../components/ContactSection'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 export function DesarrolloWebPage() {
   const { t } = useTranslation()
   useScrollReveal()
+  usePageMeta(
+    t('webDev.hero.title'),
+    t('webDev.hero.subtitle')
+  )
 
   return (
     <>
@@ -48,6 +53,9 @@ function WebHero() {
         <img
           src="/images/web-hero.jpg"
           alt={t('webDev.hero.alt')}
+          width={800}
+          height={600}
+          fetchPriority="high"
           className="w-full rounded-xl object-cover md:rounded-2xl"
           style={{ aspectRatio: '4/3' }}
         />
