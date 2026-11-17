@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://companies.devsextension.com/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://companies.devsextension.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://companies.devsextension.com/" />
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://companies.devsextension.com/desarrollo-web</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://companies.devsextension.com/desarrollo-web" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://companies.devsextension.com/desarrollo-web" />
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://companies.devsextension.com/automatizaciones</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://companies.devsextension.com/automatizaciones" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://companies.devsextension.com/automatizaciones" />
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

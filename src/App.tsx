@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { Navbar } from './components/Navbar'
+import { Footer } from './components/Footer'
 import { HomePage } from './pages/Home'
 import { DesarrolloWebPage } from './pages/DesarrolloWeb'
 import { AutomatizacionesPage } from './pages/Automatizaciones'
@@ -35,6 +36,7 @@ function App() {
             <Route path="/automatizaciones" element={<AutomatizacionesPage />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </BrowserRouter>
   )
