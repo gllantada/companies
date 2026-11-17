@@ -1,0 +1,33 @@
+{
+  "specVersion": "0.91",
+  "host": {
+    "name": "Devs Extension",
+    "url": "https://companies.devsextension.com"
+  },
+  "entries": [
+    {
+      "id": "website-home",
+      "type": "text/html",
+      "url": "https://companies.devsextension.com/",
+      "description": "Página principal de Devs Extension — desarrollo web, automatizaciones y agentes IA para empresas."
+    },
+    {
+      "id": "website-desarrollo-web",
+      "type": "text/html",
+      "url": "https://companies.devsextension.com/desarrollo-web",
+      "description": "Aplicaciones a medida, portales de pedidos, cotizadores y funcionalidades web para empresas."
+    },
+    {
+      "id": "website-automatizaciones",
+      "type": "text/html",
+      "url": "https://companies.devsextension.com/automatizaciones",
+      "description": "Asistentes conversacionales para WhatsApp, automatización de registros e integraciones entre sistemas."
+    },
+    {
+      "id": "llms-txt",
+      "type": "text/markdown",
+      "url": "https://companies.devsextension.com/llms.txt",
+      "description": "Descripción de Devs Extension para modelos de lenguaje."
+    }
+  ]
+}
