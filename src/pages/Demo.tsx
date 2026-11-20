@@ -1,8 +1,10 @@
 import { usePageMeta } from '../hooks/usePageMeta'
-import { MessageSquare, Car, Stethoscope, ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { MessageSquare, Car, Stethoscope, ArrowRight, ArrowLeft } from 'lucide-react'
 
-const demos = [
+export const demos = [
   {
+    slug: 'concesionaria-usados',
     title: 'Concesionario de Autos',
     description: 'Agente de atencion al cliente para concesionarios de autos usados. Responde consultas, busca vehiculos en el inventario y agenda visitas al local.',
     highlights: ['Busqueda inteligente de inventario', 'Nunca revela precios', 'Recolecta datos del cliente', 'Comparte ubicacion del local'],
@@ -11,6 +13,7 @@ const demos = [
     url: 'https://used-cars-chatbot-production.up.railway.app',
   },
   {
+    slug: 'consultorio-dental',
     title: 'Consultorio Dental',
     description: 'Recepcionista virtual para consultorios odontologicos. Atiende pacientes por WhatsApp, agenda turnos y maneja cancelaciones de forma natural.',
     highlights: ['Agenda turnos automaticamente', 'Consulta disponibilidad en tiempo real', 'Manejo de obras sociales', 'Tono calido y profesional'],
@@ -20,7 +23,7 @@ const demos = [
   },
 ]
 
-export function DemoPage() {
+export function DemoListPage() {
   usePageMeta('Demos', 'Proba nuestros agentes de IA en vivo. Chatbots inteligentes para distintas industrias.')
 
   return (
@@ -41,7 +44,7 @@ export function DemoPage() {
 
       <div className="grid gap-6 md:grid-cols-2">
         {demos.map((demo) => (
-          <DemoCard key={demo.title} demo={demo} />
+          <DemoCard key={demo.slug} demo={demo} />
         ))}
       </div>
 
@@ -90,16 +93,62 @@ function DemoCard({ demo }: { demo: typeof demos[number] }) {
       </ul>
 
       <div className="mt-auto">
-        <a
-          href={demo.url}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to={`/demos/${demo.slug}`}
           className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-foreground px-5 py-3 text-sm font-medium text-background transition-opacity hover:opacity-90"
         >
           Probar demo
           <ArrowRight size={16} />
-        </a>
+        </Link>
       </div>
     </div>
+  )
+}
+
+export function DemoDetailPage({ slug }: { slug: string }) {
+  const demo = demos.find((d) => d.slug === slug)
+
+  usePageMeta(
+    demo ? `Demo: ${demo.title}` : 'Demo',
+    demo?.description || ''
+  )
+
+  if (!demo) {
+    return (
+      <section className="mx-auto max-w-6xl px-4 pt-28 pb-16 text-center md:px-6 md:pt-36">
+        <h1 className="text-2xl font-bold text-foreground">Demo no encontrada</h1>
+        <Link to="/demos" className="mt-4 inline-flex items-center gap-2 text-muted-foreground hover:text-foreground">
+          <ArrowLeft size={16} /> Volver a demos
+        </Link>
+      </section>
+    )
+  }
+
+  const Icon = demo.icon
+
+  return (
+    <section className="flex h-screen flex-col pt-16">
+      {/* Header */}
+      <div className="flex items-center gap-3 border-b border-border bg-card px-4 py-3 md:px-6">
+        <Link to="/demos" className="flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground">
+          <ArrowLeft size={16} />
+          <span className="hidden sm:inline">Demos</span>
+        </Link>
+        <div className="h-5 w-px bg-border" />
+        <div className={`flex h-7 w-7 items-center justify-center rounded-md ${demo.color} text-white`}>
+          <Icon size={14} />
+        </div>
+        <span className="text-sm font-medium text-foreground">{demo.title}</span>
+        <span className="ml-auto hidden text-xs text-muted-foreground sm:inline">Demo con IA en vivo</span>
+      </div>
+
+      {/* Chat iframe */}
+      <iframe
+        src={demo.url}
+        title={`Demo: ${demo.title}`}
+        className="flex-1 w-full border-0"
+        allow="clipboard-write"
+      />
+    </section>
   )
 }

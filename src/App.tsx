@@ -5,7 +5,7 @@ import { Footer } from './components/Footer'
 import { HomePage } from './pages/Home'
 import { DesarrolloWebPage } from './pages/DesarrolloWeb'
 import { AutomatizacionesPage } from './pages/Automatizaciones'
-import { DemoPage } from './pages/Demo'
+import { DemoListPage, DemoDetailPage } from './pages/Demo'
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -28,18 +28,27 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen bg-background">
-        <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/desarrollo-web" element={<DesarrolloWebPage />} />
-            <Route path="/automatizaciones" element={<AutomatizacionesPage />} />
-            <Route path="/demos" element={<DemoPage />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <Routes>
+        {/* Demo detail: fullscreen, no navbar/footer */}
+        <Route path="/demos/concesionaria-usados" element={<DemoDetailPage slug="concesionaria-usados" />} />
+        <Route path="/demos/consultorio-dental" element={<DemoDetailPage slug="consultorio-dental" />} />
+
+        {/* Regular pages with navbar/footer */}
+        <Route path="*" element={
+          <div className="min-h-screen bg-background">
+            <Navbar />
+            <main>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/desarrollo-web" element={<DesarrolloWebPage />} />
+                <Route path="/automatizaciones" element={<AutomatizacionesPage />} />
+                <Route path="/demos" element={<DemoListPage />} />
+              </Routes>
+            </main>
+            <Footer />
+          </div>
+        } />
+      </Routes>
     </BrowserRouter>
   )
 }
