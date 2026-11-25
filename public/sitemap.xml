@@ -2,20 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://companies.devsextension.com/</loc>
-    <lastmod>2026-11-17</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-25T00:00:00-03:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://companies.devsextension.com/desarrollo-web</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-25T00:00:00-03:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://companies.devsextension.com/automatizaciones</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-25T00:00:00-03:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://companies.devsextension.com/agentes-ia-para-empresas</loc>
+    <lastmod>2026-11-25T00:00:00-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://companies.devsextension.com/agentes-ia-consultorios-odontologicos</loc>
+    <lastmod>2026-11-25T00:00:00-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://companies.devsextension.com/agentes-ia-concesionarias-autos</loc>
+    <lastmod>2026-11-25T00:00:00-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://companies.devsextension.com/demos</loc>
+    <lastmod>2026-11-25T00:00:00-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://companies.devsextension.com/privacidad</loc>
+    <lastmod>2026-11-25T00:00:00-03:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

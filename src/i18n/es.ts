@@ -119,6 +119,9 @@ export const es = {
       'Portal o aplicación',
       'Atención comercial',
       'Diagnóstico web gratuito',
+      'Agente IA para consultorio dental',
+      'Agente IA para concesionaria',
+      'Agente IA para empresa',
       'Otro',
     ],
     messagePlaceholder: 'Contanos brevemente qué querés resolver',
@@ -285,6 +288,284 @@ export const es = {
       title: '¿Qué tareas te gustaría dejar de hacer manualmente?',
       subtitle: 'Contanos qué información recibe tu equipo, qué pasos realiza y qué herramientas utiliza. Podemos evaluar qué parte del proceso conviene automatizar y qué necesita seguir bajo control de una persona.',
       cta: 'Hablemos de una automatización',
+    },
+  },
+  dental: {
+    meta: {
+      title: 'Agente de IA para Consultorios Odontologicos',
+      description: 'Automatiza la atencion de tu consultorio dental con un agente de IA que responde consultas, agenda turnos y confirma citas por WhatsApp, 24/7.',
+    },
+    hero: {
+      eyebrow: 'AGENTE IA PARA CONSULTORIOS ODONTOLOGICOS',
+      title: 'Tu consultorio dental atendiendo consultas y agendando turnos las 24 horas.',
+      subtitle: 'Un agente de inteligencia artificial que responde preguntas de pacientes, coordina turnos disponibles y envia recordatorios por WhatsApp. Sin que tu equipo tenga que atender cada mensaje.',
+      cta: 'Ver como funciona',
+      ctaSecondary: 'Solicitar una demo',
+    },
+    problems: {
+      title: '¿Te pasa esto en tu consultorio?',
+      subtitle: 'Son problemas comunes en consultorios odontologicos que atienden por WhatsApp o redes sociales.',
+      items: [
+        {
+          icon: 'Clock',
+          title: 'Turnos perdidos por falta de confirmacion',
+          description: 'Los pacientes no confirman y los turnos quedan vacios. Tu equipo pierde tiempo llamando para reconfirmar.',
+        },
+        {
+          icon: 'MessageCircle',
+          title: 'Mensajes que se acumulan sin respuesta',
+          description: 'Consultas por WhatsApp e Instagram que llegan fuera de horario o durante la atencion y no se responden a tiempo.',
+        },
+        {
+          icon: 'Users',
+          title: 'Tu recepcion dedica tiempo a tareas repetitivas',
+          description: 'Responder las mismas preguntas sobre horarios, obras sociales y tratamientos ocupa tiempo que podria destinarse a la atencion presencial.',
+        },
+        {
+          icon: 'CalendarCheck',
+          title: 'Agenda desordenada o con huecos',
+          description: 'Sin un sistema automatizado, la agenda tiene huecos y reprogramaciones que afectan la productividad del consultorio.',
+        },
+      ],
+    },
+    solution: {
+      title: 'Un agente de IA que trabaja como tu mejor recepcionista',
+      description: 'Configuramos un asistente conversacional con inteligencia artificial que conoce tu consultorio, tus horarios, tus tratamientos y tus reglas. Responde por WhatsApp como si fuera parte de tu equipo.',
+      features: [
+        'Responde consultas sobre tratamientos, precios y obras sociales',
+        'Agenda turnos segun la disponibilidad real del consultorio',
+        'Envia recordatorios y confirmaciones automaticas',
+        'Deriva urgencias o consultas complejas a tu equipo',
+        'Funciona las 24 horas, los 7 dias de la semana',
+        'Se integra con tu sistema de gestion actual',
+      ],
+    },
+    demo: {
+      title: 'Asi atiende tu agente de IA a un paciente',
+      subtitle: 'El asistente responde la consulta, verifica disponibilidad y deja el turno agendado sin intervencion manual.',
+      chatLabel: 'Conversacion por WhatsApp · Ejemplo',
+      recordLabel: 'Turno registrado',
+      conversation: [
+        { role: 'patient', text: 'Hola, necesito sacar turno para una limpieza dental' },
+        { role: 'assistant', text: 'Hola! Tenemos turnos disponibles esta semana. ¿Te queda mejor martes a las 10:00 o jueves a las 16:30?' },
+        { role: 'patient', text: 'El jueves a las 16:30 me viene bien' },
+        { role: 'assistant', text: 'Perfecto, quedo agendado el jueves a las 16:30 para limpieza dental. Te voy a enviar un recordatorio el dia anterior. ¿Tenes obra social?' },
+        { role: 'patient', text: 'Si, tengo OSDE' },
+        { role: 'assistant', text: 'Genial, OSDE tiene cobertura para limpieza. Recorda traer la credencial. ¡Te esperamos!' },
+      ],
+      record: {
+        'Paciente': 'Nuevo paciente',
+        'Tratamiento': 'Limpieza dental',
+        'Fecha': 'Jueves 16:30',
+        'Obra social': 'OSDE',
+        'Recordatorio': 'Programado',
+        'Estado': 'Confirmado',
+      },
+    },
+    benefits: {
+      title: 'Resultados que ven nuestros clientes',
+      items: [
+        { metric: '80%', label: 'Menos mensajes sin responder' },
+        { metric: '24/7', label: 'Atencion disponible todo el dia' },
+        { metric: '3x', label: 'Mas turnos agendados por semana' },
+      ],
+    },
+    close: {
+      title: '¿Queres que tu consultorio atienda consultas y agende turnos automaticamente?',
+      subtitle: 'Contanos como trabaja tu consultorio hoy y te mostramos como un agente de IA puede ayudarte a atender mejor sin sumar personal.',
+      cta: 'Solicitar una demo gratuita',
+      interest: 'Agente IA para consultorio dental',
+    },
+  },
+  cars: {
+    meta: {
+      title: 'Agente de IA para Concesionarias de Autos',
+      description: 'Automatiza la atencion comercial de tu concesionaria con un agente de IA que responde consultas de vehiculos, califica compradores y agenda visitas por WhatsApp.',
+    },
+    hero: {
+      eyebrow: 'AGENTE IA PARA CONCESIONARIAS',
+      title: 'Que ningun interesado en tus vehiculos se quede sin respuesta.',
+      subtitle: 'Un agente de inteligencia artificial que responde consultas sobre tu stock, califica compradores, envia fichas tecnicas y agenda visitas al salon. Funciona por WhatsApp las 24 horas.',
+      cta: 'Ver como funciona',
+      ctaSecondary: 'Solicitar una demo',
+    },
+    problems: {
+      title: '¿Te pasa esto en tu concesionaria?',
+      subtitle: 'Son problemas habituales en concesionarias que reciben consultas por WhatsApp y redes sociales.',
+      items: [
+        {
+          icon: 'Clock',
+          title: 'Consultas fuera de horario sin respuesta',
+          description: 'El interesado escribe a las 22 horas preguntando por un vehiculo. Para cuando tu vendedor responde al dia siguiente, ya contacto a otra concesionaria.',
+        },
+        {
+          icon: 'MessageCircle',
+          title: 'Vendedores saturados respondiendo lo mismo',
+          description: 'Precio, financiacion, kilometraje, estado. Las mismas preguntas una y otra vez, mezcladas con compradores reales y curiosos.',
+        },
+        {
+          icon: 'TrendingUp',
+          title: 'Leads que se pierden sin seguimiento',
+          description: 'Muchos interesados preguntan, pocos dejan sus datos y casi ninguno recibe un seguimiento sistematico.',
+        },
+        {
+          icon: 'Users',
+          title: 'Sin filtro entre curiosos y compradores reales',
+          description: 'Tu equipo comercial dedica el mismo tiempo a alguien que solo pregunta que a un comprador listo para cerrar.',
+        },
+      ],
+    },
+    solution: {
+      title: 'Un agente de IA que vende como tu mejor vendedor',
+      description: 'Configuramos un asistente conversacional que conoce tu stock completo, responde con informacion actualizada y califica cada lead antes de derivarlo a tu equipo comercial.',
+      features: [
+        'Responde consultas sobre vehiculos con datos del stock real',
+        'Envia fotos, fichas tecnicas y detalles de financiacion',
+        'Califica al comprador segun presupuesto, urgencia e interes',
+        'Agenda visitas al salon o test drives',
+        'Registra cada lead con su informacion completa en tu CRM',
+        'Funciona las 24 horas por WhatsApp, Instagram y tu web',
+      ],
+    },
+    demo: {
+      title: 'Asi atiende tu agente de IA a un comprador',
+      subtitle: 'El asistente responde con informacion del stock real, califica al comprador y agenda una visita sin intervencion manual.',
+      chatLabel: 'Conversacion por WhatsApp · Ejemplo',
+      recordLabel: 'Lead registrado',
+      conversation: [
+        { role: 'buyer', text: 'Hola, vi una Hilux 2023 publicada. ¿Esta disponible?' },
+        { role: 'assistant', text: 'Hola! Si, la Toyota Hilux SRV 2023 con 45.000 km esta disponible. Tiene motor 2.8 diesel, automatica, 4x4. ¿Te paso la ficha completa?' },
+        { role: 'buyer', text: 'Si, y cuanto sale financiada?' },
+        { role: 'assistant', text: 'El precio de lista es $38.500.000. Con financiacion propia, en 48 cuotas queda en $1.150.000/mes aprox. ¿Queres agendaruna visita para verla? Tenemos disponibilidad esta semana.' },
+        { role: 'buyer', text: 'Si, el sabado a la manana puedo ir' },
+        { role: 'assistant', text: 'Listo, te agendo para el sabado a las 10:00. Te va a atender nuestro equipo comercial. ¿A que nombre queda la reserva?' },
+      ],
+      record: {
+        'Vehiculo': 'Hilux SRV 2023 - 45.000 km',
+        'Interes': 'Compra con financiacion',
+        'Presupuesto': 'Cuotas hasta $1.150.000',
+        'Visita': 'Sabado 10:00',
+        'Calificacion': 'Alta (comprador activo)',
+        'Estado': 'Derivado a ventas',
+      },
+    },
+    benefits: {
+      title: 'Resultados que ven nuestros clientes',
+      items: [
+        { metric: '5x', label: 'Mas leads calificados por mes' },
+        { metric: '24/7', label: 'Atencion comercial sin interrupciones' },
+        { metric: '60%', label: 'Menos tiempo en consultas repetitivas' },
+      ],
+    },
+    close: {
+      title: '¿Queres que tu concesionaria atienda y califique leads automaticamente?',
+      subtitle: 'Contanos como trabaja tu equipo comercial hoy y te mostramos como un agente de IA puede multiplicar tus oportunidades de venta.',
+      cta: 'Solicitar una demo gratuita',
+      interest: 'Agente IA para concesionaria',
+    },
+  },
+  agents: {
+    meta: {
+      title: 'Agentes de IA para Empresas en Argentina',
+      description: 'Implementamos agentes de inteligencia artificial para automatizar atencion al cliente, ventas y procesos operativos por WhatsApp. Desarrollo a medida para empresas argentinas.',
+    },
+    hero: {
+      eyebrow: 'AGENTES DE IA PARA EMPRESAS',
+      title: 'Automatiza la atencion, las ventas y los procesos de tu empresa con IA.',
+      subtitle: 'Desarrollamos agentes de inteligencia artificial a medida que atienden clientes por WhatsApp, califican leads, gestionan pedidos y se integran con tus sistemas. Para empresas de Argentina y Latinoamerica.',
+      cta: 'Ver casos de uso',
+      ctaSecondary: 'Hablar con un especialista',
+    },
+    useCases: {
+      title: '¿Para que se usa un agente de IA en una empresa?',
+      subtitle: 'Los agentes de IA pueden resolver tareas que hoy requieren tiempo de tu equipo, con atencion inmediata y disponibilidad permanente.',
+      items: [
+        {
+          icon: 'MessageCircle',
+          title: 'Atencion al cliente 24/7',
+          description: 'Responde consultas frecuentes, resuelve dudas sobre productos o servicios y deriva los casos complejos a tu equipo.',
+        },
+        {
+          icon: 'BarChart3',
+          title: 'Calificacion de leads',
+          description: 'Recopila informacion del interesado, evalua su perfil y lo deriva al vendedor correcto con contexto completo.',
+        },
+        {
+          icon: 'Clock',
+          title: 'Agenda de turnos y reuniones',
+          description: 'Coordina disponibilidad, confirma citas y envia recordatorios automaticos sin intervencion manual.',
+        },
+        {
+          icon: 'Zap',
+          title: 'Pedidos y cotizaciones',
+          description: 'Recibe solicitudes con la informacion necesaria, consulta disponibilidad y registra los pedidos para tu equipo.',
+        },
+        {
+          icon: 'Plug',
+          title: 'Integracion con tus sistemas',
+          description: 'Se conecta con tu CRM, ERP, planillas o sistemas internos para consultar y registrar informacion en tiempo real.',
+        },
+        {
+          icon: 'Bot',
+          title: 'Procesos operativos internos',
+          description: 'Automatiza tareas internas como reportes, seguimiento de entregas, gestion de incidencias y notificaciones.',
+        },
+      ],
+    },
+    how: {
+      title: '¿Como implementamos un agente de IA?',
+      steps: [
+        {
+          title: 'Entendemos tu negocio',
+          description: 'Analizamos los procesos que queres automatizar, los canales que usas y las herramientas con las que trabaja tu equipo.',
+        },
+        {
+          title: 'Disenamos el agente',
+          description: 'Definimos que va a saber, como va a responder, que puede hacer y cuando debe derivar a una persona.',
+        },
+        {
+          title: 'Desarrollamos e integramos',
+          description: 'Construimos el agente, lo conectamos a WhatsApp y a tus sistemas, y lo probamos con casos reales.',
+        },
+        {
+          title: 'Optimizamos con datos',
+          description: 'Monitoreamos las conversaciones, mejoramos las respuestas y ajustamos el comportamiento segun los resultados.',
+        },
+      ],
+    },
+    demo: {
+      title: 'Asi funciona un agente de IA en la practica',
+      subtitle: 'El agente recibe una consulta, responde con informacion precisa, recopila datos y registra la solicitud para tu equipo.',
+      chatLabel: 'Conversacion por WhatsApp · Ejemplo',
+      recordLabel: 'Solicitud registrada',
+      conversation: [
+        { role: 'client', text: 'Hola, quiero saber si hacen envios a Cordoba' },
+        { role: 'assistant', text: 'Hola! Si, hacemos envios a Cordoba capital y alrededores. El costo depende del peso del pedido. ¿Que producto te interesa?' },
+        { role: 'client', text: 'Necesito 20 cajas del producto A' },
+        { role: 'assistant', text: 'Perfecto, 20 cajas del producto A. El envio a Cordoba sale $15.000 y tarda 3 dias habiles. ¿Queres que registre el pedido? Necesito tu nombre y datos de facturacion.' },
+      ],
+      record: {
+        'Cliente': 'Nuevo contacto',
+        'Producto': 'Producto A x 20 cajas',
+        'Envio': 'Cordoba - $15.000',
+        'Canal': 'WhatsApp',
+        'Estado': 'Pendiente de confirmacion',
+      },
+    },
+    benefits: {
+      title: 'Por que las empresas eligen agentes de IA',
+      items: [
+        { metric: '24/7', label: 'Disponible todo el dia, todos los dias' },
+        { metric: '80%', label: 'Consultas resueltas sin intervencion humana' },
+        { metric: '10x', label: 'Mas rapido que responder manualmente' },
+        { metric: '$0', label: 'Costo por hora extra o feriado' },
+      ],
+    },
+    close: {
+      title: '¿Queres implementar un agente de IA en tu empresa?',
+      subtitle: 'Contanos que procesos queres automatizar y te mostramos como un agente de IA puede ayudarte. Sin compromiso.',
+      cta: 'Solicitar una consulta gratuita',
+      interest: 'Agente IA para empresa',
     },
   },
 }

@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="iKgmyYyUtchDphKbba3pqHXZAJWUtJ7KDs0bf7fRtUw" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
     <meta name="description" content="Desarrollo web, automatizaciones y agentes IA para empresas en Pilar y zona norte de Buenos Aires. Mejoramos sitios, desarrollamos funcionalidades y automatizamos tareas manuales." />
-    <meta name="keywords" content="desarrollo web empresas, automatizaciones IA, agentes IA empresas, desarrollo web Pilar, automatización WhatsApp, cotizador online, portal de pedidos, aplicaciones a medida Buenos Aires" />
+    <meta name="keywords" content="desarrollo web empresas, automatizaciones IA, agentes IA empresas, desarrollo web Pilar, automatización WhatsApp, cotizador online, portal de pedidos, aplicaciones a medida Buenos Aires, chatbot empresas Argentina" />
+    <meta name="author" content="Gonzalo Llantada" />
     <meta name="theme-color" content="#fffdf8" />
     <meta name="geo.region" content="AR-B" />
     <meta name="geo.placename" content="Pilar, Buenos Aires" />
@@ -26,6 +29,9 @@
     <meta property="og:title" content="Devs Extension — Desarrollo web y automatizaciones para empresas" />
     <meta property="og:description" content="Desarrollo web, automatizaciones y agentes IA para empresas en Pilar y zona norte de Buenos Aires." />
     <meta property="og:image" content="https://companies.devsextension.com/images/hero-empresa.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:locale" content="es_AR" />
     <meta property="og:site_name" content="Devs Extension" />
 
@@ -35,11 +41,11 @@
     <meta name="twitter:description" content="Desarrollo web, automatizaciones y agentes IA para empresas en Pilar y zona norte de Buenos Aires." />
     <meta name="twitter:image" content="https://companies.devsextension.com/images/hero-empresa.jpg" />
 
-    <!-- Structured Data -->
+    <!-- Structured Data: Organization -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
+      "@type": ["ProfessionalService", "LocalBusiness"],
       "name": "Devs Extension",
       "url": "https://companies.devsextension.com",
       "logo": "https://companies.devsextension.com/favicon.svg",
@@ -57,21 +63,40 @@
         "longitude": -58.9142
       },
       "areaServed": [
-        {
-          "@type": "City",
-          "name": "Pilar",
-          "containedInPlace": { "@type": "State", "name": "Buenos Aires" }
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Zona Norte de Buenos Aires"
-        },
-        {
-          "@type": "Country",
-          "name": "Argentina"
-        }
+        { "@type": "City", "name": "Pilar", "containedInPlace": { "@type": "State", "name": "Buenos Aires" } },
+        { "@type": "AdministrativeArea", "name": "Zona Norte de Buenos Aires" },
+        { "@type": "Country", "name": "Argentina" }
       ],
-      "serviceType": ["Desarrollo web", "Automatizaciones", "Agentes IA", "Aplicaciones a medida", "Chatbots WhatsApp"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de desarrollo y automatización",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Desarrollo web",
+              "description": "Mejoramos sitios web, incorporamos funcionalidades como cotizadores, sistemas de pedidos y portales para clientes, y desarrollamos aplicaciones a medida."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Automatizaciones",
+              "description": "Integramos sistemas, automatizamos el registro de datos entre formularios, planillas y plataformas. Conexiones entre las herramientas que tu empresa ya usa."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Agentes conversacionales con IA",
+              "description": "Asistentes por WhatsApp, web e Instagram que atienden consultas 24/7, toman pedidos, agendan turnos y derivan oportunidades al equipo comercial."
+            }
+          }
+        ]
+      },
       "priceRange": "$$",
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
@@ -89,11 +114,87 @@
         "@type": "Person",
         "name": "Gonzalo Llantada"
       },
-      "sameAs": []
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=1420770067791354",
+        "https://www.instagram.com/devsextension/"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué servicios ofrece Devs Extension?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ofrecemos desarrollo web (sitios, aplicaciones y funcionalidades a medida), automatizaciones (integración entre sistemas y procesos) y agentes conversacionales con IA (asistentes por WhatsApp, web e Instagram que atienden consultas 24/7)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo funciona un agente conversacional con IA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es un asistente que atiende consultas por WhatsApp, web o Instagram las 24 horas. Puede responder preguntas frecuentes, tomar pedidos, agendar turnos y derivar oportunidades a tu equipo comercial, todo de forma automática."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta un desarrollo o automatización?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los valores dependen de cada proyecto particular. Podés agendar una reunión gratuita de 30 minutos donde evaluamos tu necesidad y te damos una propuesta personalizada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué zona trabajan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Estamos en Pilar, Buenos Aires. Trabajamos con empresas de toda Argentina, tanto presencialmente en zona norte como de forma remota."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://companies.devsextension.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Desarrollo web", "item": "https://companies.devsextension.com/desarrollo-web" },
+        { "@type": "ListItem", "position": 2, "name": "Automatizaciones", "item": "https://companies.devsextension.com/automatizaciones" },
+        { "@type": "ListItem", "position": 2, "name": "Demos", "item": "https://companies.devsextension.com/demos" }
+      ]
     }
     </script>
 
     <title>Devs Extension — Desarrollo web y automatizaciones para empresas</title>
+
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1168634719306848');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1168634719306848&ev=PageView&noscript=1"
+    /></noscript>
   </head>
   <body>
     <div id="root"></div>
