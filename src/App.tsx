@@ -8,6 +8,7 @@ import { DesarrolloWebPage } from './pages/DesarrolloWeb'
 import { AutomatizacionesPage } from './pages/Automatizaciones'
 import { DemoListPage, DemoDetailPage } from './pages/Demo'
 import { PrivacyPage } from './pages/Privacy'
+import { GeoPilarPage, GeoZonaNortePage } from './pages/GeoPilar'
 import { BlogPage } from './pages/Blog'
 import { BlogArticlePage } from './pages/BlogArticle'
 import { AgentesConsultoriosPage } from './pages/AgentesConsultorios'
@@ -52,6 +53,8 @@ function App() {
                 <Route path="/agentes-ia-consultorios-odontologicos" element={<AgentesConsultoriosPage />} />
                 <Route path="/agentes-ia-concesionarias-autos" element={<AgentesConcesionariasPage />} />
                 <Route path="/agentes-ia-para-empresas" element={<AgentesEmpresasPage />} />
+                <Route path="/desarrollo-web-pilar" element={<GeoPilarPage />} />
+                <Route path="/desarrollo-web-zona-norte" element={<GeoZonaNortePage />} />
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/blog/:slug" element={<BlogArticlePage />} />
                 <Route path="/demos" element={<DemoListPage />} />
