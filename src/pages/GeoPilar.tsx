@@ -18,6 +18,7 @@ export function GeoPilarPage() {
         title="Desarrollo web y agentes de IA para empresas en Pilar"
         subtitle="Somos una empresa de tecnologia ubicada en Pilar, Buenos Aires. Desarrollamos sitios web, aplicaciones a medida y agentes de inteligencia artificial que automatizan la atencion al cliente por WhatsApp. Trabajamos con empresas, consultorios y comercios de Pilar y zona norte."
         location="Pilar, Buenos Aires"
+        image="/images/geo-pilar-hero.jpg"
       />
       <LocalServices />
       <Verticals />
@@ -45,6 +46,7 @@ export function GeoZonaNortePage() {
         title="Desarrollo web y agentes de IA para empresas en zona norte"
         subtitle="Somos una empresa de tecnologia en Pilar que atiende empresas de toda la zona norte de Buenos Aires: Escobar, Tigre, San Isidro, San Fernando, Vicente Lopez, Campana y alrededores. Desarrollamos sitios web, aplicaciones y agentes de IA para automatizar ventas y atencion al cliente."
         location="Zona Norte, Buenos Aires"
+        image="/images/geo-zona-norte-hero.jpg"
       />
       <LocalServices />
       <ZonaNorteLocalities />
@@ -59,9 +61,12 @@ export function GeoZonaNortePage() {
   )
 }
 
-function GeoHero({ eyebrow, title, subtitle, location }: { eyebrow: string; title: string; subtitle: string; location: string }) {
+function GeoHero({ eyebrow, title, subtitle, location, image }: { eyebrow: string; title: string; subtitle: string; location: string; image: string }) {
   return (
     <section className="mx-auto max-w-6xl px-4 pt-24 pb-12 md:px-6 md:pt-36 md:pb-20">
+      <div className="mb-8 overflow-hidden rounded-xl md:mb-10 md:rounded-2xl">
+        <img src={image} alt={location} width={1600} height={1131} fetchPriority="high" className="w-full object-cover" style={{ aspectRatio: '16/9', maxHeight: '400px' }} />
+      </div>
       <div className="max-w-3xl">
         <span className="mb-4 inline-flex items-center gap-2 text-sm font-semibold tracking-widest text-muted-foreground uppercase">
           <MapPin className="h-4 w-4" />
@@ -117,9 +122,12 @@ function LocalServices() {
       <h2 className="mb-3 text-center text-2xl font-bold text-foreground md:mb-4 md:text-3xl">
         Que hacemos
       </h2>
-      <p className="mx-auto mb-8 max-w-2xl text-center text-sm text-muted-foreground md:mb-12">
+      <p className="mx-auto mb-8 max-w-2xl text-center text-sm text-muted-foreground md:mb-10">
         Tres servicios para empresas que quieren vender mas, atender mejor y trabajar con menos tareas manuales.
       </p>
+      <div className="mb-8 overflow-hidden rounded-xl md:mb-10 md:rounded-2xl">
+        <img src="/images/geo-services.jpg" alt="Empresario usando tecnologia en su negocio" width={1600} height={1131} loading="lazy" className="w-full object-cover" style={{ aspectRatio: '16/9', maxHeight: '320px' }} />
+      </div>
       <div className="scroll-reveal-stagger grid gap-4 sm:grid-cols-3 md:gap-6">
         {services.map((service, i) => (
           <Link key={i} to={service.link} className="group rounded-xl border border-border bg-card p-5 transition-colors hover:border-foreground/20 md:p-6">
