@@ -8,6 +8,8 @@ import { DesarrolloWebPage } from './pages/DesarrolloWeb'
 import { AutomatizacionesPage } from './pages/Automatizaciones'
 import { DemoListPage, DemoDetailPage } from './pages/Demo'
 import { PrivacyPage } from './pages/Privacy'
+import { BlogPage } from './pages/Blog'
+import { BlogArticlePage } from './pages/BlogArticle'
 import { AgentesConsultoriosPage } from './pages/AgentesConsultorios'
 import { AgentesConcesionariasPage } from './pages/AgentesConcesionarias'
 import { AgentesEmpresasPage } from './pages/AgentesEmpresas'
@@ -50,6 +52,8 @@ function App() {
                 <Route path="/agentes-ia-consultorios-odontologicos" element={<AgentesConsultoriosPage />} />
                 <Route path="/agentes-ia-concesionarias-autos" element={<AgentesConcesionariasPage />} />
                 <Route path="/agentes-ia-para-empresas" element={<AgentesEmpresasPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/blog/:slug" element={<BlogArticlePage />} />
                 <Route path="/demos" element={<DemoListPage />} />
                 <Route path="/privacidad" element={<PrivacyPage />} />
               </Routes>

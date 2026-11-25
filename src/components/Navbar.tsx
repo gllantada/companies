@@ -41,6 +41,9 @@ export function Navbar() {
           <Link to="/automatizaciones" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
             {t('services.automation.label')}
           </Link>
+          <Link to="/blog" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            Blog
+          </Link>
           {isHome ? (
             <a href="#contacto" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
               {t('nav.contact')}
@@ -102,6 +105,9 @@ export function Navbar() {
           </Link>
           <Link to="/automatizaciones" onClick={() => setOpen(false)} className="block py-3 text-sm text-muted-foreground">
             {t('services.automation.label')}
+          </Link>
+          <Link to="/blog" onClick={() => setOpen(false)} className="block py-3 text-sm text-muted-foreground">
+            Blog
           </Link>
           {isHome ? (
             <a href="#contacto" onClick={() => setOpen(false)} className="block py-3 text-sm text-muted-foreground">

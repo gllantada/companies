@@ -24,6 +24,9 @@ export function Footer() {
               <Link to="/automatizaciones" className="text-sm text-muted-foreground hover:text-foreground">
                 {t('services.automation.label')}
               </Link>
+              <Link to="/blog" className="text-sm text-muted-foreground hover:text-foreground">
+                Blog
+              </Link>
               <Link to="/#contacto" className="text-sm text-muted-foreground hover:text-foreground">
                 {t('nav.contact')}
               </Link>
